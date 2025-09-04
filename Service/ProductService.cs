@@ -21,5 +21,10 @@ namespace Actividad_1.Service
         {
             return _repository.GetAll();
         }
+
+        public Product GetProduct(int id)
+        {
+            return _repository.GetById(id);
+        }
     }
 }

@@ -17,3 +17,24 @@ else
 {
     Console.WriteLine("No products found.");
 }
+
+
+Console.WriteLine("\n");
+
+Product product2 = oService.GetProduct(2);
+
+if (product2 != null)
+{
+    Console.WriteLine(product2);
+}
+else
+{
+    Console.WriteLine("No existe el producto");
+}
+
+
+
+
+
+Console.WriteLine("Presiona cualquier tecla para salir...");
+Console.ReadKey();

@@ -36,7 +36,32 @@ namespace Actividad_1.Data.Implementation
 
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+            // Preparar parámetros
+            List<ParameterSP> param = new List<ParameterSP>()
+            {
+                new ParameterSP()
+                {
+                    Name = "@idarticulo",
+                    Value = id
+                }
+            };
+
+            
+            var dt = DataHelper.GetInstance().ExecuteSPQuery("GetArticuloById", param);
+
+            // Si vino un registro, lo mapeamos a Product y lo retornamos
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                Product p = new Product()
+                {
+                   Id = (int)dt.Rows[0]["id_articulo"],
+                   Name = (string)dt.Rows[0]["nombre"],
+                   UnitPrice = (decimal)dt.Rows[0]["pre_unitario"]
+                };
+                return p;
+            }
+
+            return null;
         }
 
         public bool Save(Product product)

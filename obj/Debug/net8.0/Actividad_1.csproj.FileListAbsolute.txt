@@ -130,3 +130,4 @@ C:\Users\rafac\OneDrive\Documentos\Visual Studio 2022\Clases\Programacion 2\Prod
 C:\Users\rafac\OneDrive\Documentos\Visual Studio 2022\Clases\Programacion 2\Product_Repository_CRUD\obj\Debug\net8.0\Actividad_1.pdb
 C:\Users\rafac\OneDrive\Documentos\Visual Studio 2022\Clases\Programacion 2\Product_Repository_CRUD\obj\Debug\net8.0\Actividad_1.genruntimeconfig.cache
 C:\Users\rafac\OneDrive\Documentos\Visual Studio 2022\Clases\Programacion 2\Product_Repository_CRUD\obj\Debug\net8.0\ref\Actividad_1.dll
+C:\Users\rafac\OneDrive\Documentos\Visual Studio 2022\Clases\Programacion 2\Product_Repository_CRUD\obj\Debug\net8.0\Actividad_1.sourcelink.json

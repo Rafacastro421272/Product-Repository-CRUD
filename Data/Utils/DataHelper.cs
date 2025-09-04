@@ -30,22 +30,30 @@ namespace Actividad_1.Data.Utils
 
 
 
-        public DataTable ExecuteSPQuery(string sp)
+        public DataTable ExecuteSPQuery(string sp, List<ParameterSP>? param = null)
         {
             DataTable dt = new DataTable();
 
-            try
+            try 
             {
-                using (var conn = new SqlConnection(Properties.Resources.ConnectionString))
-                using (var cmd = new SqlCommand(sp, conn))
+                _connection.Open();
+                var cmd = new SqlCommand(sp, _connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = sp;
+
+                if (param != null)
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    conn.Open();
-                    using (var reader = cmd.ExecuteReader())
+                    foreach (ParameterSP p in param)
                     {
-                        dt.Load(reader);
+                        cmd.Parameters.AddWithValue(p.Name, p.Value);
                     }
                 }
+
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (SqlException)
+            {
+                dt = null;
             }
             finally { _connection.Close(); }
             return dt;
