@@ -1,0 +1,60 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rafac\\OneDrive\\Documentos\\Visual Studio 2022\\Clases\\Programacion 2\\Product_Repository_CRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF88F2C-D7EC-4EB8-9CFD-C34BEF512522}|Actividad_1.csproj|c:\\users\\rafac\\onedrive\\documentos\\visual studio 2022\\clases\\programacion 2\\product_repository_crud\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{3FF88F2C-D7EC-4EB8-9CFD-C34BEF512522}|Actividad_1.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF88F2C-D7EC-4EB8-9CFD-C34BEF512522}|Actividad_1.csproj|c:\\users\\rafac\\onedrive\\documentos\\visual studio 2022\\clases\\programacion 2\\product_repository_crud\\actividad_1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3FF88F2C-D7EC-4EB8-9CFD-C34BEF512522}|Actividad_1.csproj|solutionrelative:actividad_1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\rafac\\OneDrive\\Documentos\\Visual Studio 2022\\Clases\\Programacion 2\\Product_Repository_CRUD\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\rafac\\OneDrive\\Documentos\\Visual Studio 2022\\Clases\\Programacion 2\\Product_Repository_CRUD\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-09-04T02:22:53.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Actividad_1",
+              "DocumentMoniker": "C:\\Users\\rafac\\OneDrive\\Documentos\\Visual Studio 2022\\Clases\\Programacion 2\\Product_Repository_CRUD\\Actividad_1.csproj",
+              "RelativeDocumentMoniker": "Actividad_1.csproj",
+              "ToolTip": "C:\\Users\\rafac\\OneDrive\\Documentos\\Visual Studio 2022\\Clases\\Programacion 2\\Product_Repository_CRUD\\Actividad_1.csproj",
+              "RelativeToolTip": "Actividad_1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-04T02:22:45.88Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
