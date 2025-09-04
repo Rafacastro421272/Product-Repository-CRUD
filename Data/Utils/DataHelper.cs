@@ -58,5 +58,38 @@ namespace Actividad_1.Data.Utils
             finally { _connection.Close(); }
             return dt;
         }
+
+        public int ExecuteSPNonQuery(string sp, List<ParameterSP> param = null)
+        {
+            int rowsAffected = 0;
+
+            try
+            {
+                _connection.Open();
+                var cmd = new SqlCommand(sp, _connection);
+                cmd.CommandType= CommandType.StoredProcedure;
+                cmd.CommandText = sp;
+                if (param != null)
+                {
+                    foreach (ParameterSP p in param)
+                    {
+                        cmd.Parameters.AddWithValue(p.Name, p.Value);
+                    }
+                }
+                rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                rowsAffected= -1;
+            }
+            finally
+            { 
+                _connection.Close();
+            }
+
+            return rowsAffected;
+        }
+
     }
 }

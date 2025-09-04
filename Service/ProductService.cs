@@ -26,5 +26,15 @@ namespace Actividad_1.Service
         {
             return _repository.GetById(id);
         }
+
+        public bool Save(Product product)
+        {
+            return _repository.Save(product);
+        }
+
+        public bool Delete(int id)
+        {
+            return _repository.DeleteById(id);
+        }
     }
 }

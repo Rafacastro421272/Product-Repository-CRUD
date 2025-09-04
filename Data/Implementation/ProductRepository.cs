@@ -14,7 +14,17 @@ namespace Actividad_1.Data.Implementation
     {
         public bool DeleteById(int id)
         {
-            throw new NotImplementedException();
+            var param = new List<ParameterSP>()
+            {
+                new ParameterSP()
+                {
+                    Name = "IdArticulo",
+                    Value = id
+                }
+            };
+
+            int rows = DataHelper.GetInstance().ExecuteSPNonQuery("DeleteArticulo", param);
+            return rows > 0;
         }
 
         public List<Product> GetAll()
@@ -28,7 +38,7 @@ namespace Actividad_1.Data.Implementation
                 Product p = new Product();
                 p.Id = Convert.ToInt32(row["id_articulo"]);
                 p.Name = (string)row["nombre"];
-                p.UnitPrice = (decimal)row["pre_unitario"];
+                p.UnitPrice = (string)row["pre_unitario"];
                 list.Add(p);
             }
             return list;
@@ -56,7 +66,7 @@ namespace Actividad_1.Data.Implementation
                 {
                    Id = (int)dt.Rows[0]["id_articulo"],
                    Name = (string)dt.Rows[0]["nombre"],
-                   UnitPrice = (decimal)dt.Rows[0]["pre_unitario"]
+                   UnitPrice = (string)dt.Rows[0]["pre_unitario"]
                 };
                 return p;
             }
@@ -66,7 +76,24 @@ namespace Actividad_1.Data.Implementation
 
         public bool Save(Product product)
         {
-            throw new NotImplementedException();
+            int rowsAffected = 0;
+            var param = new List<ParameterSP>
+            {
+                new ParameterSP { Name = "@Nombre", Value = product.Name },
+                new ParameterSP { Name = "@PrecioUnitario", Value = product.UnitPrice },
+                new ParameterSP { Name = "@Activo", Value = product.Status ? 1 : 0 }
+            };
+
+            if (product.Id == 0)
+            {
+                rowsAffected = DataHelper.GetInstance().ExecuteSPNonQuery("InsertArticulo",param);
+            }
+            else
+            {
+                param.Add(new ParameterSP { Name = "@IdArticulo", Value = product.Id });
+                rowsAffected = DataHelper.GetInstance().ExecuteSPNonQuery("UpdateArticulo",param);
+            }
+            return rowsAffected > 0;
         }
     }
 }

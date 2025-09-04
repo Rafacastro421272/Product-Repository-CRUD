@@ -14,9 +14,10 @@ CREATE TABLE FORMASPAGO (
 CREATE TABLE ARTICULOS (
     id_articulo INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(40) NOT NULL,
-    pre_unitario DECIMAL(10,2) NOT NULL,
+    pre_unitario Varchar(30) NOT NULL,
     activo BIT NOT NULL DEFAULT 1
 );
+
 
 -- Tabla de facturas
 CREATE TABLE FACTURAS (
