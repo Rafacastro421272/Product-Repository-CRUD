@@ -44,9 +44,7 @@ namespace Actividad_1.Data.Implementation
                 i.PaymentMethod.Name = (string)row["nombre"];
                 invoices.Add(i);
             }
-
             return invoices;
-
         }
 
         public Invoice GetByID(int id)
@@ -104,9 +102,6 @@ namespace Actividad_1.Data.Implementation
                         cmd.Parameters.AddWithValue("@IdFormaPago", invoice.PaymentMethod.Id);
                         cmd.Parameters.AddWithValue("@Cliente", invoice.Customer);
                         cmd.Parameters.AddWithValue("@Activo", invoice.Status);
-
-                        // Si el SP requiere la fecha, descomentar la siguiente línea:
-                        // cmd.Parameters.AddWithValue("@Fecha", invoice.Date);
 
                         SqlParameter param = new SqlParameter("@NroFactura", SqlDbType.Int);
                         param.Direction = ParameterDirection.Output;
