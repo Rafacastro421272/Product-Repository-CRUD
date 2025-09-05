@@ -46,7 +46,7 @@ namespace Actividad_1.Data.Implementation
 
         public Product GetById(int id)
         {
-            // Preparar parámetros
+            
             List<ParameterSP> param = new List<ParameterSP>()
             {
                 new ParameterSP()
@@ -59,7 +59,7 @@ namespace Actividad_1.Data.Implementation
             
             var dt = DataHelper.GetInstance().ExecuteSPQuery("GetArticuloById", param);
 
-            // Si vino un registro, lo mapeamos a Product y lo retornamos
+            
             if (dt != null && dt.Rows.Count > 0)
             {
                 Product p = new Product()
