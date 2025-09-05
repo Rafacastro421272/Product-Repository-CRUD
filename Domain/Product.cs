@@ -10,7 +10,7 @@ namespace Actividad_1.Domain
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string  UnitPrice { get; set; }
+        public decimal  UnitPrice { get; set; }
         public bool Status { get; set; }
 
         public override string ToString()

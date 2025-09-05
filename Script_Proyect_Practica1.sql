@@ -14,7 +14,7 @@ CREATE TABLE FORMASPAGO (
 CREATE TABLE ARTICULOS (
     id_articulo INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(40) NOT NULL,
-    pre_unitario Varchar(30) NOT NULL,
+    pre_unitario decimal(18,2) NOT NULL,
     activo BIT NOT NULL DEFAULT 1
 );
 

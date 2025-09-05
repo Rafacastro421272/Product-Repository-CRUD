@@ -38,7 +38,7 @@ namespace Actividad_1.Data.Implementation
                 Product p = new Product();
                 p.Id = Convert.ToInt32(row["id_articulo"]);
                 p.Name = (string)row["nombre"];
-                p.UnitPrice = (string)row["pre_unitario"];
+                p.UnitPrice = (decimal)row["pre_unitario"];
                 list.Add(p);
             }
             return list;
@@ -66,7 +66,7 @@ namespace Actividad_1.Data.Implementation
                 {
                    Id = (int)dt.Rows[0]["id_articulo"],
                    Name = (string)dt.Rows[0]["nombre"],
-                   UnitPrice = (string)dt.Rows[0]["pre_unitario"]
+                   UnitPrice = (decimal)dt.Rows[0]["pre_unitario"]
                 };
                 return p;
             }

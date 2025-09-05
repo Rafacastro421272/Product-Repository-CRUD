@@ -91,5 +91,9 @@ namespace Actividad_1.Data.Utils
             return rowsAffected;
         }
 
+        internal SqlConnection? GetConnection()
+        {
+            return _connection;
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace Actividad_1.Service
             return _repository.GetByID(id);
         }
 
-        public bool AddInvoice(Invoice invoice)
+        public bool SaveInvoice(Invoice invoice)
         {
             return _repository.Save(invoice);
         }
